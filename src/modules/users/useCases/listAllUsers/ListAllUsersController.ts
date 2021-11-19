@@ -8,17 +8,15 @@ class ListAllUsersController {
   handle(request: Request, response: Response): Response {
     const { user_id } = request.headers;
 
-    const users = this.listAllUsersUseCase.execute({
-      user_id: user_id.toString(),
-    });
+    try {
+      const user = this.listAllUsersUseCase.execute({
+        user_id: user_id.toString(),
+      });
 
-    if (!users) {
-      return response
-        .status(400)
-        .json({ message: "User does not have permission" });
+      return response.json(user);
+    } catch (error) {
+      return response.status(400).json({ message: error.message });
     }
-
-    return response.json(users);
   }
 }
 

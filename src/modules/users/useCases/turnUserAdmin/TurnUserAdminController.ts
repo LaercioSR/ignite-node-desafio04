@@ -13,7 +13,7 @@ class TurnUserAdminController {
     });
 
     if (!user) {
-      return response.status(404).json({ message: "User User not found" });
+      return response.status(400).json({ message: "User User not found" });
     }
 
     return response.json(user);
