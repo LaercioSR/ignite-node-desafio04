@@ -1,0 +1,12 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Ignite Challenge Documentation",
+    "description": "This is an API Ignite Challenge",
+    "version": "1.0.0",
+    "contact": {
+      "email": "laercio.rios13@hotmail.com"
+    }
+  },
+  "paths": {}
+}
