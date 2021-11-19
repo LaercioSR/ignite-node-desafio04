@@ -12,7 +12,7 @@ Link com Detalhes: [Desafio 04 - Introdução ao SOLID](https://www.notion.so/De
 
 ## Requisitos
 - [x] Cadastro de usuário;
-- [ ] Listagem de usuários;
+- [x] Listagem de usuários;
 - [ ] Tornar usuário em ADMIN;
 - [ ] Obter um usuário especifico;
 
