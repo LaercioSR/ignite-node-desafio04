@@ -8,15 +8,15 @@ class ShowUserProfileController {
   handle(request: Request, response: Response): Response {
     const { user_id } = request.params;
 
-    const user = this.showUserProfileUseCase.execute({
-      user_id,
-    });
+    try {
+      const user = this.showUserProfileUseCase.execute({
+        user_id: user_id.toString(),
+      });
 
-    if (!user) {
-      return response.status(404).json({ message: "User User not found" });
+      return response.json(user);
+    } catch (error) {
+      return response.status(404).json({ error: error.message });
     }
-
-    return response.json(user);
   }
 }
 
