@@ -13,11 +13,11 @@ Link com Detalhes: [Desafio 04 - Introdução ao SOLID](https://www.notion.so/De
 ## Requisitos
 - [x] Cadastro de usuário;
 - [x] Listagem de usuários;
-- [ ] Tornar usuário em ADMIN;
+- [x] Tornar usuário em ADMIN;
 - [ ] Obter um usuário especifico;
 
 ### Regras de Negócio
-- [ ] Apenas ADMINs podem receber a listagem de usuários;
+- [x] Apenas ADMINs podem receber a listagem de usuários;
 
 ## Tecnologias
 - [Node.js](https://nodejs.org/)
