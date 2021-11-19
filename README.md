@@ -14,7 +14,7 @@ Link com Detalhes: [Desafio 04 - Introdução ao SOLID](https://www.notion.so/De
 - [x] Cadastro de usuário;
 - [x] Listagem de usuários;
 - [x] Tornar usuário em ADMIN;
-- [ ] Obter um usuário especifico;
+- [x] Obter um usuário especifico;
 
 ### Regras de Negócio
 - [x] Apenas ADMINs podem receber a listagem de usuários;
