@@ -1,7 +1,7 @@
 # Desafio 04 - Jornada Ignite (NodeJs) da Rockeseat
 
 <h4 align="center"> 
-	🚧  Desafio em Andamento  🚧
+	✅  Desafio Concluído  ✅
 </h4>
 
 ## Descrição do Projeto
