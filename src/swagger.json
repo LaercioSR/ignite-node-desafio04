@@ -63,7 +63,7 @@
                     }
                   },
                   "example": {
-                    "admin": true,
+                    "admin": false,
                     "id": "34db44d2-34c7-49c0-bd81-535fc98e2236",
                     "name": "João das Neves",
                     "email": "joao.neves@example.com",
@@ -140,7 +140,7 @@
                   },
                   "example": [
                     {
-                      "admin": true,
+                      "admin": false,
                       "id": "34db44d2-34c7-49c0-bd81-535fc98e2236",
                       "name": "João das Neves",
                       "email": "joao.neves@example.com",
@@ -148,7 +148,7 @@
                       "updated_at": "2021-11-19T19:40:32.760Z"
                     },
                     {
-                      "admin": false,
+                      "admin": true,
                       "id": "653046dc-3e53-413e-ae49-2a0508c988ff",
                       "name": "Maria das Neves",
                       "email": "maria.neves@example.com",
@@ -162,6 +162,156 @@
           },
           "400": {
             "description": "User not found or user without permission",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "example": {
+                    "error": "User not found!"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/{user_id}": {
+      "get": {
+        "tags": ["User"],
+        "summary": "Get user",
+        "description": "Get user profile",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "ID of user",
+            "required": true,
+            "type": "string",
+            "example": "34db44d2-34c7-49c0-bd81-535fc98e2236"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "admin": {
+                      "type": "boolean"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "date"
+                    },
+                    "updated_at": {
+                      "type": "date"
+                    }
+                  },
+                  "example": {
+                    "admin": false,
+                    "id": "34db44d2-34c7-49c0-bd81-535fc98e2236",
+                    "name": "João das Neves",
+                    "email": "joao.neves@example.com",
+                    "created_at": "2021-11-19T19:40:09.455Z",
+                    "updated_at": "2021-11-19T19:40:32.760Z"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  },
+                  "example": {
+                    "error": "User not found!"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/{user_id}/admin": {
+      "patch": {
+        "tags": ["User"],
+        "summary": "Turn admin",
+        "description": "Turn a user an administrator",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "description": "ID of user",
+            "required": true,
+            "type": "string",
+            "example": "34db44d2-34c7-49c0-bd81-535fc98e2236"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success turning a user an administrator",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "admin": {
+                      "type": "boolean"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "date"
+                    },
+                    "updated_at": {
+                      "type": "date"
+                    }
+                  },
+                  "example": {
+                    "admin": true,
+                    "id": "34db44d2-34c7-49c0-bd81-535fc98e2236",
+                    "name": "João das Neves",
+                    "email": "joao.neves@example.com",
+                    "created_at": "2021-11-19T19:40:09.455Z",
+                    "updated_at": "2021-11-19T19:40:32.760Z"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User not found",
             "content": {
               "application/json": {
                 "schema": {
