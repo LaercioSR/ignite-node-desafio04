@@ -29,7 +29,7 @@ Link com Detalhes: [Desafio 04 - Introdução ao SOLID](https://www.notion.so/De
 ## Desafio 05
 
 <h4 align="center"> 
-	🚧  Desafio 05 Em Andamento  🚧
+	✅  Desafio 05 Concluido  ✅
 </h4>
 
 ### Detalhes
@@ -38,10 +38,10 @@ Desafio consiste em documentar o código do desafio 04 usando o swagger.
 Link com Detalhes: [Desafio 05 - Documentando com Swagger](https://www.notion.so/Desafio-02-Documentando-com-Swagger-8ce869ea608743e292851bd951f3239f)
 
 ### Documentação das Rotas
-- [ ] Cadastro de usuário;
-- [ ] Listagem de usuários;
-- [ ] Tornar usuário em ADMIN;
-- [ ] Obter um usuário especifico;
+- [x] Cadastro de usuário;
+- [x] Listagem de usuários;
+- [x] Tornar usuário em ADMIN;
+- [x] Obter um usuário especifico;
 ### Tecnologias
 - [Swagger](https://swagger.io//)
 	- Usando o pacote [swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express)
